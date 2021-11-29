@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>loremmmmmmmmmmmmmmmmmm</p>
+    <p>gh hft</p>
+    <p>dgg yhth</p>
+    <button onclick="handleClick()">Click Me-1</button>
+    <button id="snd">Click Me-2</button>
+    <button>Click Me-3</button>
+    <button id="last">Click Me-4</button>
+    <ul>
+        <li id="list"></li>
+    </ul>
+
+    <script>
+        function handleClick(){
+            document.body.style.backgroundColor = 'cyan';
+        }
+        document.getElementById('last').addEventListener('click', function(){
+            document.body.style.color = 'tomato';
+        },
+        
+        );
+        document.getElementById('snd').addEventListener('click', function(){
+            alert("Done");
+        });
+        document.getElementById("list").appendChild("node");
+        document.getElementById("list").appendChild("nodehh");
+        
+    </script>
+</body>
+</html>
