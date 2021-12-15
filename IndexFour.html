@@ -14,11 +14,8 @@
     <ul id="users-container">
 
     </ul>
-    <ul id="book-price">
-
-    </ul>
     <script>
-        fetch('http://readon.glamworlditltd.com/api/books')
+        fetch('https://jsonplaceholder.typicode.com/people')
         .then(response => response.json())
         .then(json => displayUser(json))
         .catch(error => console.log(error))
@@ -32,9 +29,7 @@
 
         function displayUser(users){
             const userNames = users.map(user => user.name );
-            const selling_price_ebook = users.map(user => user.selling_price_ebook );
             const ul = document.getElementById("users-container");
-            const ul2 = document.getElementById("book-price");
             for(let i = 0; i< userNames.length ;i++){
                 //console.log(userNames[i]);
                 const user = userNames[i];
@@ -42,15 +37,7 @@
                 li.innerText = user;
 
                 ul.appendChild(li);
-            }  
-            for(let i = 0; i< selling_price_ebook.length ;i++){
-                //console.log(selling_price_ebook[i]);
-                const user = selling_price_ebook[i];
-                const li = document.createElement("li");
-                li.innerText = user;
-
-                ul2.appendChild(li);
-            }  
+            }   
         }
     </script>
     
